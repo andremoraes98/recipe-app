@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import RecipeContext from '../context/RecipesContext';
 
 const RecipeFilter = () => {
@@ -22,29 +23,31 @@ const RecipeFilter = () => {
   };
 
   return (
-    <section>
-      <button
-        type="button"
+    <section className="filters">
+      <Button
         data-testid="All-category-filter"
         onClick={ () => requestAPIInitial() }
+        className="m-1"
+        variant="dark"
       >
         All
-      </button>
+      </Button>
       {
         filterRecipe
           .map((filter, index) => {
             if (index < MAX_FILTERS) {
               return (
-                <button
-                  type="button"
+                <Button
                   data-testid={ `${filter.strCategory}-category-filter` }
                   key={ filter.strCategory }
                   onClick={ ({ target }) => requestDrink(
                     filter.strCategory, target.innerHTML,
                   ) }
+                  className="m-1 text-truncate"
+                  variant="dark"
                 >
                   { filter.strCategory }
-                </button>
+                </Button>
               );
             } return null;
           })

@@ -24,7 +24,7 @@ const CardRecipe = () => {
   // Caso o Card esteja em /foods, renderiza as chaves de Foods.
   if (history.location.pathname === '/foods') {
     return (
-      <>
+      <div className="container-foods">
         <FoodFilter />
         {
           data.map(({ strMeal, strMealThumb, idMeal }, index) => {
@@ -39,7 +39,10 @@ const CardRecipe = () => {
                   tabIndex={ 0 }
                   onKeyPress={ () => {} }
                 >
-                  <h6 data-testid={ `${index}-card-name` }>
+                  <h6
+                    data-testid={ `${index}-card-name` }
+                    className="text-truncate"
+                  >
                     {strMeal}
                   </h6>
                   <img
@@ -54,14 +57,14 @@ const CardRecipe = () => {
             } return null;
           })
         }
-      </>
+      </div>
     );
   }
 
   // Caso o Card esteja em /drinks, renderiza as chaves de Drinks.
   if (history.location.pathname === '/drinks') {
     return (
-      <>
+      <div className="container-foods">
         <DrinkFilter />
         {
           data.map(({ strDrink, strDrinkThumb, idDrink }, index) => {
@@ -75,7 +78,10 @@ const CardRecipe = () => {
                   tabIndex={ 0 }
                   onKeyPress={ () => {} }
                 >
-                  <h6 data-testid={ `${index}-card-name` }>
+                  <h6
+                    data-testid={ `${index}-card-name` }
+                    className="text-truncate"
+                  >
                     {strDrink}
                   </h6>
                   <img
@@ -90,7 +96,7 @@ const CardRecipe = () => {
             } return null;
           })
         }
-      </>
+      </div>
     );
   }
 };
