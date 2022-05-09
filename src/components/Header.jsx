@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { BiSearchAlt } from 'react-icons/bi';
 import PropTypes from 'prop-types';
@@ -7,6 +7,7 @@ import BarraDeBusca from './BarraDeBusca';
 
 const Header = ({ pageTitle, isSearch }) => {
   const [showSearch, setShowSearch] = useState(false);
+  const { location: { pathname } } = useHistory();
 
   return (
     <header>
@@ -14,7 +15,7 @@ const Header = ({ pageTitle, isSearch }) => {
         <Link to="/profile">
           <BsFillPersonLinesFill
             size={ 40 }
-            color="#444"
+            color={ pathname === '/profile' ? '#F24B0F' : '#0D0D0D' }
           />
         </Link>
 
@@ -28,7 +29,7 @@ const Header = ({ pageTitle, isSearch }) => {
           >
             <BiSearchAlt
               size={ 40 }
-              color="#444"
+              color={ showSearch ? '#F24B0F' : '#0D0D0D' }
             />
           </button>
         )}
