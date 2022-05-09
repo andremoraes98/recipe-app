@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Login.css';
 import { useHistory } from 'react-router';
+import { Button } from 'react-bootstrap';
 
 const Login = () => {
   const [password, setPassword] = useState('');
@@ -30,7 +31,7 @@ const Login = () => {
   return (
     <div className="content">
       <div className="login-box">
-        <h2>Login</h2>
+        <h2>TudiBão</h2>
         <form>
           <div className="user-box">
             <input
@@ -53,14 +54,15 @@ const Login = () => {
               onChange={ (e) => setPassword(e.target.value) }
             />
           </div>
-          <button
+          <Button
             data-testid="login-submit-btn"
             disabled={ btnDisabled }
             type="button"
             onClick={ onClick }
+            variant={ btnDisabled ? 'danger' : 'success' }
           >
             Entrar
-          </button>
+          </Button>
         </form>
       </div>
     </div>

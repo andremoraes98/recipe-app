@@ -6,15 +6,19 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .content {
   background-attachment: fixed;
-  background-image: url('../images/foodBackground.png');
-  background-size: cover;
+  background-image: url('../images/foodBackgroundRotated.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   display: flex;
   height: 640px;
-  width: 360px;
+  width: 450px;
+  margin: 0 auto;
 }
 
 .login-box {
@@ -53,7 +57,7 @@ body {
   width: 100%;
 }
 
-.login-box form button {
+/* .login-box form button {
   background-color: #fc466b;
   border-style: none;
   color: black;
@@ -75,18 +79,28 @@ body {
   color: rgb(21, 230, 66);
 }
 
-.login-box button:hover:disabled {
-  background: #b80a2d;
-}
 
 .login-box button span {
   display: block;
   position: absolute;
+} */
+
+.login-box button:disabled {
+  cursor: not-allowed;
+  width: 100%;
+}
+
+.login-box button:enabled {
+  width: 100%;
 }
 
 @media ( min-width : 720px ) {
 
   .content {
+    background-attachment: fixed;
+    background-image: url('../images/foodBackground.png');
+    background-size: cover;
+    display: flex;
     height: 760px;
     width: 100%;
   }
@@ -95,6 +109,10 @@ body {
 @media ( min-width : 820px ) {
 
   .content {
+    background-attachment: fixed;
+    background-image: url('../images/foodBackground.png');
+    background-size: cover;
+    display: flex;
     height: 1200px;
     width: 100%;
   }
@@ -103,6 +121,10 @@ body {
 @media ( min-width : 1079px ) {
 
   .content {
+    background-attachment: fixed;
+    background-image: url('../images/foodBackground.png');
+    background-size: cover;
+    display: flex;
     height: 768px;
     width: 100%;
   }
@@ -111,6 +133,10 @@ body {
 @media ( min-width : 1918px ) {
 
   .content {
+    background-attachment: fixed;
+    background-image: url('../images/foodBackground.png');
+    background-size: cover;
+    display: flex;
     height: 1080px;
     width: 100%;
   }

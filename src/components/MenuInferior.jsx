@@ -1,31 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import drinkIcon from '../images/drinkIcon.svg';
-import exploreIcon from '../images/exploreIcon.svg';
-import mealIcon from '../images/mealIcon.svg';
+import { BiDrink } from 'react-icons/bi';
+import { GiCompass } from 'react-icons/gi';
+import { MdOutlineFoodBank } from 'react-icons/md';
 
 const MenuInferior = () => (
   <footer className="footer-container" data-testid="footer">
     <div className="footer">
       <Link to="/drinks">
-        <img
-          src={ drinkIcon }
-          alt="Ícone de bebida"
-          data-testid="drinks-bottom-btn"
+        <BiDrink
+          size={ 40 }
+          color="#444"
         />
       </Link>
       <Link to="/explore">
-        <img
-          src={ exploreIcon }
-          alt="Ícone de explore"
-          data-testid="explore-bottom-btn"
+        <GiCompass
+          size={ 40 }
+          color="#444"
         />
       </Link>
       <Link to="/foods">
-        <img
-          src={ mealIcon }
-          alt="Ícone de comida"
-          data-testid="food-bottom-btn"
+        <MdOutlineFoodBank
+          size={ 40 }
+          color="#444"
         />
       </Link>
     </div>
@@ -33,7 +30,3 @@ const MenuInferior = () => (
 );
 
 export default MenuInferior;
-
-// comidas: /explore/foods
-// bebidas: /explore/drinks
-// explorar: /explore
