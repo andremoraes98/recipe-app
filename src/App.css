@@ -7,7 +7,7 @@
 }
 
 html, body {
-  background-color: white;
+  background-color: #F2AB91 !important;
   height: 100%;
 }
 
@@ -19,6 +19,7 @@ html, body {
   height: 61px;
   justify-content: space-between;
   padding: 0 25px;
+  background-color: #F2F2F2;
 }
 
 .header h4 {
@@ -48,6 +49,7 @@ html, body {
   padding: 15px 0;
   position: fixed;
   width: 100%;
+  background-color: #F2F2F2;
 }
 
 .footer {
@@ -185,4 +187,63 @@ html, body {
 
 .ingredients-check:checked + span {
   text-decoration: line-through;
+}
+
+.filters, .container-foods {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.filters {
+  margin-bottom: 10px;
+}
+
+.filters button {
+  width: 30%;
+  background-color: #F24B0F;
+}
+
+.container-foods {
+  padding-bottom: 80px;
+}
+
+.container-foods div {
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 3px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F2F2F2;
+  color: #444;
+  width: 45%;
+  transition: 0.5s;
+}
+
+.container-foods div:hover {
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 3px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #444;
+  color: #F2F2F2;
+  width: 45%;
+  transition: 0.5s;
+}
+
+.container-foods div img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.container-foods div h6 {
+  width: 90%;
+  text-align: center;
 }
