@@ -33,7 +33,3 @@ const MenuInferior = () => (
 );
 
 export default MenuInferior;
-
-// comidas: /explore/foods
-// bebidas: /explore/drinks
-// explorar: /explore
