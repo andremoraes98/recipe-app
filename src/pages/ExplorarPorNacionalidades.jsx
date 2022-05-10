@@ -43,7 +43,9 @@ const ExplorarPorNacionalidades = () => {
         setSelected={ setSelected }
         selected={ selected }
       />
-      <CardNationalities nationalities={ nationalities } />
+      <div className="container-foods">
+        <CardNationalities nationalities={ nationalities } />
+      </div>
       <MenuInferior />
     </div>
   );

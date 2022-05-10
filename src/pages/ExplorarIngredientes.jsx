@@ -6,7 +6,9 @@ import MenuInferior from '../components/MenuInferior';
 const ExplorarIngredientes = () => (
   <div>
     <Header pageTitle="Explore Ingredients" isSearch={ false } />
-    <CardIngredient />
+    <div className="container-foods">
+      <CardIngredient />
+    </div>
     <MenuInferior />
   </div>
 );

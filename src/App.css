@@ -110,7 +110,9 @@ html, body {
 }
 
 .done-recipe-img img {
+  border: 1px solid black;
   width: 100%;
+  border-radius: 50%;
 }
 
 .done-recipe-img {
@@ -158,6 +160,7 @@ html, body {
   margin: 5% auto;
   padding: 20px 0;
   width: 90%;
+  background-color: #f2f2f2;
 }
 
 .done-recipe-buttons {
@@ -168,12 +171,6 @@ html, body {
 }
 
 .done-recipe-buttons button {
-  background-color: #c4c4c4;
-  border: solid black 1px;
-  border-radius: 7px;
-  color: black;
-  cursor: pointer;
-  padding: 3px 0;
   width: 30%;
 }
 
@@ -210,7 +207,7 @@ html, body {
   padding-bottom: 80px;
 }
 
-.container-foods div, .recipe-recomendation {
+.container-foods div, .recipe-recomendation, .container-foods a {
   align-items: center;
   background-color: #f2f2f2;
   border: 1px solid #444;
@@ -225,7 +222,7 @@ html, body {
   width: 45%;
 }
 
-.container-foods div:hover, .recipe-recomendation:hover {
+.container-foods div:hover, .recipe-recomendation:hover, .container-foods a:hover {
   align-items: center;
   background-color: #444;
   border: 1px solid #444;
@@ -240,7 +237,7 @@ html, body {
   width: 45%;
 }
 
-.container-foods div img, .recipe-recomendation img {
+.container-foods div img, .recipe-recomendation img, .container-foods a img {
   border-radius: 50%;
   margin-bottom: 10px;
   border: 1px solid #444;
@@ -332,4 +329,17 @@ form {
 .input-search {
   width: 95%;
   margin: 0 auto;
+}
+
+.explore-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 450px;
+}
+
+.dropdown button {
+  width: 360px;
+  margin-bottom: 10px;
 }
