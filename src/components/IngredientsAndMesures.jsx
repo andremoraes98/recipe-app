@@ -65,8 +65,8 @@ const IngredientsAndMesures = ({ id, pathFood }) => {
     const mes = data.getMonth() + 1;
     const ano = data.getFullYear();
 
-    const stringOfTags = dataRecipe[0].strTags || 'Carlin';
-    const tags = stringOfTags.split(',') || '';
+    const stringOfTags = dataRecipe[0].strTags || '';
+    const tags = stringOfTags.split(',') || null;
 
     const doneRecipe = [
       {
