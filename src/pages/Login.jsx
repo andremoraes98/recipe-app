@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './Login.css';
 import { useHistory } from 'react-router';
 import { Button } from 'react-bootstrap';
 
@@ -32,6 +31,7 @@ const Login = () => {
     <div className="content">
       <div className="login-box">
         <h2>TudiBão</h2>
+        <p>Login</p>
         <form>
           <div className="user-box">
             <input
