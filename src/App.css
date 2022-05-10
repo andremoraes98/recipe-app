@@ -7,19 +7,19 @@
 }
 
 html, body {
-  background-color: #F2AB91 !important;
+  background-color: #f2ab91 ! important;
   height: 100%;
 }
 
 .header {
   align-items: center;
+  background-color: #f2f2f2;
   border-bottom: 1px solid #666;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   height: 61px;
   justify-content: space-between;
   padding: 0 25px;
-  background-color: #F2F2F2;
 }
 
 .header h4 {
@@ -43,13 +43,13 @@ html, body {
 }
 
 .footer-container {
+  background-color: #f2f2f2;
   border-top: 1px solid #666;
   bottom: 0;
   box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 15px 0;
   position: fixed;
   width: 100%;
-  background-color: #F2F2F2;
 }
 
 .footer {
@@ -105,6 +105,7 @@ html, body {
 .start-btn {
   bottom: 0;
   position: fixed;
+  width: 100%;
 }
 
 .done-recipe-img img {
@@ -191,8 +192,8 @@ html, body {
 
 .filters, .container-foods {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .filters {
@@ -200,50 +201,93 @@ html, body {
 }
 
 .filters button {
+  background-color: #f24b0f;
   width: 30%;
-  background-color: #F24B0F;
 }
 
 .container-foods {
   padding-bottom: 80px;
 }
 
-.container-foods div {
+.container-foods div, .recipe-recomendation {
+  align-items: center;
+  background-color: #f2f2f2;
   border: 1px solid #444;
   border-radius: 10px;
-  padding: 5px;
-  margin: 3px;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #F2F2F2;
   color: #444;
-  width: 45%;
-  transition: 0.5s;
-}
-
-.container-foods div:hover {
-  border: 1px solid #444;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 3px;
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
   justify-content: space-around;
-  background-color: #444;
-  color: #F2F2F2;
-  width: 45%;
+  margin: 3px;
+  padding: 5px;
   transition: 0.5s;
+  width: 45%;
 }
 
-.container-foods div img {
+.container-foods div:hover, .recipe-recomendation:hover {
+  align-items: center;
+  background-color: #444;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  margin: 3px;
+  padding: 5px;
+  transition: 0.5s;
+  width: 45%;
+}
+
+.container-foods div img, .recipe-recomendation img {
   border-radius: 50%;
   margin-bottom: 10px;
+  border: 1px solid #444;
 }
 
 .container-foods div h6 {
-  width: 90%;
   text-align: center;
+  width: 90%;
+}
+
+.recomendations {
+  padding-bottom: 40px;
+}
+
+.detail-photo {
+  width: 25vh;
+  height: 25vh;
+}
+
+.recipe-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #444;
+  margin-top: 50px;
+}
+
+.detail-photo {
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  border: 1px solid #444;
+}
+
+.recipe-detail div:last-child {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.recipe-detail div:last-child button {
+  width: 35%;
+}
+
+.share-btn {
+  display: flex;
 }

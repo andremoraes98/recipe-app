@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import Header from '../components/Header';
 import MenuInferior from '../components/MenuInferior';
 
@@ -9,10 +10,10 @@ const TelaDeExplorar = () => (
 
     <div className="explore-container">
       <Link data-testid="explore-foods" to="/explore/foods">
-        <button type="button">Explore Foods</button>
+        <Button variant="dark">Explore Foods</Button>
       </Link>
       <Link data-testid="explore-drinks" to="/explore/drinks">
-        <button type="button">Explore Drinks</button>
+        <Button variant="dark">Explore Drinks</Button>
       </Link>
     </div>
 

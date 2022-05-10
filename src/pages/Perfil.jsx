@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import MenuInferior from '../components/MenuInferior';
@@ -35,19 +36,19 @@ const Perfil = (props) => {
         <h5 data-testid="profile-email">{user}</h5>
 
         <Link data-testid="profile-done-btn" to="/done-recipes">
-          <button type="button">Done Recipes</button>
+          <Button variant="dark">Done Recipes</Button>
         </Link>
         <Link data-testid="profile-favorite-btn" to="/favorite-recipes">
-          <button type="button">Favorite Recipes</button>
+          <Button variant="dark">Favorite Recipes</Button>
         </Link>
 
-        <button
+        <Button
           onClick={ handleLogout }
           data-testid="profile-logout-btn"
-          type="button"
+          variant="dark"
         >
           Logout
-        </button>
+        </Button>
       </div>
 
       <MenuInferior />
