@@ -8,8 +8,8 @@
 
 html, body {
   background-color: #f2ab91 ! important;
+  font-family: Poppins , sans-serif ! important;
   height: 100%;
-  font-family: Poppins, sans-serif ! important;
 }
 
 .header {
@@ -111,8 +111,8 @@ html, body {
 
 .done-recipe-img img {
   border: 1px solid black;
-  width: 100%;
   border-radius: 50%;
+  width: 100%;
 }
 
 .done-recipe-img {
@@ -152,6 +152,7 @@ html, body {
 
 .done-recipe {
   align-items: center;
+  background-color: #f2f2f2;
   border: 1px solid #444;
   border-radius: 12px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -160,7 +161,6 @@ html, body {
   margin: 5% auto;
   padding: 20px 0;
   width: 90%;
-  background-color: #f2f2f2;
 }
 
 .done-recipe-buttons, .favorite-buttons {
@@ -238,9 +238,9 @@ html, body {
 }
 
 .container-foods div img, .recipe-recomendation img, .container-foods a img {
+  border: 1px solid #444;
   border-radius: 50%;
   margin-bottom: 10px;
-  border: 1px solid #444;
 }
 
 .container-foods div h6 {
@@ -253,32 +253,32 @@ html, body {
 }
 
 .detail-photo {
-  width: 25vh;
   height: 25vh;
+  width: 25vh;
 }
 
 .recipe-detail {
+  align-items: center;
+  background-color: #f2f2f2;
+  color: #444;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  background-color: #f2f2f2;
-  color: #444;
   margin-top: 50px;
+  text-align: center;
 }
 
 .detail-photo {
-  width: 65%;
-  height: 65%;
-  border-radius: 50%;
   border: 1px solid #444;
+  border-radius: 50%;
+  height: 65%;
+  width: 65%;
 }
 
 .recipe-detail div:last-child {
-  margin: 20px 0;
   display: flex;
   justify-content: space-around;
+  margin: 20px 0;
   width: 100%;
 }
 
@@ -303,8 +303,8 @@ html, body {
 
 iframe {
   display: flex;
-  margin: 15px auto;
   height: 170px;
+  margin: 15px auto;
 }
 
 .finish-recipe-btn {
@@ -312,8 +312,8 @@ iframe {
 }
 
 .list-group-item {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .filter-search {
@@ -327,35 +327,35 @@ form {
 }
 
 .input-search {
-  width: 95%;
   margin: 0 auto;
+  width: 95%;
 }
 
 .explore-buttons {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   height: 450px;
+  justify-content: space-around;
 }
 
 .dropdown button {
-  width: 360px;
   margin-bottom: 10px;
+  width: 360px;
 }
 
 .favorite-recipes div:last-child {
-  max-width: 300px;
   margin: 0 0 15px;
+  max-width: 300px;
 }
 
 .favorite-recipes {
-  width: 85%;
-  margin: 0 auto;
-  color: #444;
+  border: 1px solid #444;
   border-radius: 12px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border: 1px solid #444;
+  color: #444;
+  margin: 0 auto;
+  width: 85%;
 }
 
 .favorite-recipes a {
