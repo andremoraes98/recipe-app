@@ -34,10 +34,18 @@ body {
 }
 
 .login-box h2 {
-  color: black;
+  color: #f24b0f;
+  font-family: Dancing Script , cursive;
+  font-size: 50px;
   margin: 0 0 30px;
   padding: 0;
   text-align: center;
+}
+
+.login-box p {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .login-box .user-box {
@@ -77,12 +85,12 @@ body {
   border-radius: 5px;
   color: rgb(21, 230, 66);
 }
-
+*/
 
 .login-box button span {
   display: block;
   position: absolute;
-} */
+}
 
 .login-box button:disabled {
   cursor: not-allowed;

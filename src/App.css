@@ -8,7 +8,11 @@
 
 html, body {
   background-color: #f2ab91 ! important;
+<<<<<<< HEAD
   font-family: Poppins , sans-serif ! important;
+=======
+  font-family: Poppins , sans-serif !important;
+>>>>>>> 3d6370a6822fd689da2eb66c5dbc38ac9571e58c
   height: 100%;
 }
 
@@ -360,4 +364,148 @@ form {
 
 .favorite-recipes a {
   color: #444;
+}
+
+.content {
+  background-attachment: fixed;
+  background-image: url('../src/images/foodBackgroundRotated.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  height: 640px;
+  margin: 0 auto;
+  width: 450px;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.877);
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+.login-box h2 {
+  color: #f24b0f;
+  font-family: Dancing Script , cursive;
+  font-size: 50px;
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.login-box p {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 30px;
+  outline: none;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.login-box form {
+  background: transparent;
+}
+
+/* .login-box form button {
+  background-color: #fc466b;
+  border-style: none;
+  color: black;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin-top: 40px;
+  overflow: hidden;
+  padding: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.login-box button:hover:enabled {
+  background: #fbffff;
+  border-radius: 5px;
+  color: rgb(21, 230, 66);
+}
+*/
+
+.login-box button span {
+  display: block;
+  position: absolute;
+}
+
+.login-box button:disabled {
+  cursor: not-allowed;
+  width: 100%;
+}
+
+.login-box button:enabled {
+  width: 100%;
+}
+
+@media ( min-width : 720px ) {
+
+  .content {
+    background-attachment: fixed;
+    background-image: url('../src/images/foodBackground.png');
+    background-size: cover;
+    display: flex;
+    height: 760px;
+    width: 100%;
+  }
+}
+
+@media ( min-width : 820px ) {
+
+  .content {
+    background-attachment: fixed;
+    background-image: url('../src/images/foodBackground.png');
+    background-size: cover;
+    display: flex;
+    height: 1200px;
+    width: 100%;
+  }
+}
+
+@media ( min-width : 1079px ) {
+
+  .content {
+    background-attachment: fixed;
+    background-image: url('../src/images/foodBackground.png');
+    background-size: cover;
+    display: flex;
+    height: 768px;
+    width: 100%;
+  }
+}
+
+@media ( min-width : 1918px ) {
+
+  .content {
+    background-attachment: fixed;
+    background-image: url('../src/images/foodBackground.png');
+    background-size: cover;
+    display: flex;
+    height: 1080px;
+    width: 100%;
+  }
 }
