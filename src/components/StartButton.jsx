@@ -21,7 +21,6 @@ const StartButton = (id, path, url) => {
         variant="dark"
       >
         {isInProgress ? 'Continue Recipe' : 'Start Recipe' }
-
       </Button>
     </Link>);
 };

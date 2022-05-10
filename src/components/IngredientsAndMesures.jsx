@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Button, ListGroup, Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import RecipeContext from '../context/RecipesContext';
 
@@ -91,32 +92,36 @@ const IngredientsAndMesures = ({ id, pathFood }) => {
   };
 
   return (
-    <div className="ingredients-in-progress">
-      {ingredients.map((element, index) => (
-        <div key={ index }>
-          <label
-            htmlFor={ element }
-            data-testid={ `${index}-ingredient-step` }
+    <div>
+      <ListGroup className="ingredients-in-progress details-ingredients">
+        {ingredients.map((element, index) => (
+          <Form.Group
+            key={ index }
           >
-            <input
-              type="checkbox"
-              id={ element }
-              className="ingredients-check"
-              onClick={ ({ target }) => { handleClick(target); getFromLocalStorage(); } }
-              defaultChecked={ inLocalStorage.includes(element) }
-            />
-            <span>{`- ${element} - ${measures[index] || ''}`}</span>
-          </label>
-        </div>))}
+            <ListGroup.Item>
+              <Form.Check
+                id={ element }
+                name={ element }
+                onClick={ ({ target }) => {
+                  handleClick(target);
+                  getFromLocalStorage();
+                } }
+                checked={ inLocalStorage.includes(element) }
+                label={ ` ${element} - ${measures[index] || ''}` }
+              />
+            </ListGroup.Item>
+          </Form.Group>))}
+      </ListGroup>
       <Link to="/done-recipes">
-        <button
-          type="button"
+        <Button
           disabled={ isDisabled }
           data-testid="finish-recipe-btn"
+          className="finish-recipe-btn"
           onClick={ handleFinish }
+          variant="info"
         >
           Finish Recipe
-        </button>
+        </Button>
       </Link>
     </div>
   );

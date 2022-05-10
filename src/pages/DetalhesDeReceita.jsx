@@ -71,8 +71,15 @@ const DetalhesDeReceita = ({ match: { params: { id }, url } }) => {
             <FavoriteButton id={ idFood } path={ pathFood } dataId="favorite-btn" />
           </div>
         </section>
-        { getIngredientsAndMeasures(dataRecipe[0]) }
-        <p data-testid="instructions">{dataRecipe[0].strInstructions}</p>
+        <ul className="details-ingredients">
+          { getIngredientsAndMeasures(dataRecipe[0]) }
+        </ul>
+        <p
+          data-testid="instructions"
+          className="instructions"
+        >
+          {dataRecipe[0].strInstructions}
+        </p>
         { pathFood
       && (
         <iframe
@@ -83,8 +90,8 @@ const DetalhesDeReceita = ({ match: { params: { id }, url } }) => {
         />
       )}
         <CardRecipeRecomendation />
-        {StartButton(idFood, pathFood, url)}
 
+        {StartButton(idFood, pathFood, url)}
       </div>
     )
   );

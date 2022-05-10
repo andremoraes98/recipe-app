@@ -33,32 +33,37 @@ const ReceitasEmProgresso = ({ match: { params: { id } } }) => {
   return (
     loading ? 'Carregando' : (
       <div>
-        <div>
-          <h2
+        <section className="recipe-detail">
+          <h3
             data-testid="recipe-title"
           >
             {pathFood ? dataRecipe[0].strMeal : dataRecipe[0].strDrink}
 
-          </h2>
-          <h4 data-testid="recipe-category">
-            {pathFood
-              ? dataRecipe[0].strCategory : dataRecipe[0].strAlcoholic}
-          </h4>
-          <img
-            src={ pathFood ? dataRecipe[0].strMealThumb : dataRecipe[0].strDrinkThumb }
-            alt="Foto da coisa pronta"
-            data-testid="recipe-photo"
-            width="80 vn"
-            height="80 vn"
-          />
-          <div className="favorite-share-btn">
-            <ShareButton URL={ URL } dataId="share-btn" />
-            <FavoriteButton id={ id } path={ pathFood } dataId="favorite-btn" />
+          </h3>
+          <div>
+            <img
+              src={ pathFood ? dataRecipe[0].strMealThumb : dataRecipe[0].strDrinkThumb }
+              alt="Foto da coisa pronta"
+              data-testid="recipe-photo"
+              className="detail-photo"
+            />
+            <h5 data-testid="recipe-category">
+              {pathFood
+                ? dataRecipe[0].strCategory : dataRecipe[0].strAlcoholic}
+            </h5>
           </div>
-          <br />
-          <p data-testid="instructions">{dataRecipe[0].strInstructions}</p>
-          <IngredientsAndMesures id={ id } pathFood={ pathFood } />
-        </div>
+          <div>
+            <ShareButton URL={ URL } dataId="share-btn" />
+            <FavoriteButton id={ idFood } path={ pathFood } dataId="favorite-btn" />
+          </div>
+        </section>
+        <p
+          data-testid="instructions"
+          className="instructions"
+        >
+          {dataRecipe[0].strInstructions}
+        </p>
+        <IngredientsAndMesures id={ id } pathFood={ pathFood } />
       </div>));
 };
 

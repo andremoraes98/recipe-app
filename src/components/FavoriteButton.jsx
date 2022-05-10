@@ -44,7 +44,7 @@ function FavoriteButton({ id, path, dataId }) {
     <Button
       data-testid={ dataId }
       onClick={ handleClick }
-      variant="outline-dark"
+      variant={ isFavorite ? 'dark' : 'outline-dark' }
     >
       { isFavorite
         ? <MdOutlineFavorite size={ 40 } />

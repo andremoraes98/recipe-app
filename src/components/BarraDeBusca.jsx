@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { InputGroup, FormControl, Button, ButtonGroup } from 'react-bootstrap';
 import RecipeContext from '../context/RecipesContext';
 
 const BarraDeBusca = () => {
@@ -8,15 +9,27 @@ const BarraDeBusca = () => {
 
   return (
     <form onSubmit={ (e) => requestAPIByFilter(e) }>
-      <div>
-        <input
-          data-testid="search-input"
-          type="text"
-          value={ textFilter }
-          onChange={ ({ target }) => setTextFilter(`${target.value}`) }
-        />
-      </div>
-      <div>
+      <section className="input-search">
+        <ButtonGroup>
+          <InputGroup>
+            <FormControl
+              data-testid="search-input"
+              placeholder="Pesquisar..."
+              type="text"
+              value={ textFilter }
+              onChange={ ({ target }) => setTextFilter(`${target.value}`) }
+            />
+          </InputGroup>
+          <Button
+            data-testid="exec-search-btn"
+            type="submit"
+            variant="dark"
+          >
+            Search
+          </Button>
+        </ButtonGroup>
+      </section>
+      <div className="filter-search">
         <label htmlFor="ingredient">
           <input
             name="filter"
@@ -51,7 +64,6 @@ const BarraDeBusca = () => {
           First Letter
         </label>
       </div>
-      <button data-testid="exec-search-btn" type="submit">Search</button>
     </form>
   );
 };
