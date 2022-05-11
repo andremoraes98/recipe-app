@@ -7,9 +7,10 @@
 }
 
 html, body {
-  background-color: #f2ab91 ! important;
-  font-family: Poppins , sans-serif ! important;
+  background-color: #f2ab91;
+  font-family: Poppins , sans-serif;
   height: 100%;
+  width: 100vw;
 }
 
 .header {
@@ -95,6 +96,7 @@ html, body {
 .recomendations {
   display: flex;
   overflow: scroll;
+  padding-bottom: 40px;
 }
 
 .recipe-recomendation {
@@ -184,6 +186,11 @@ html, body {
   display: flex;
 }
 
+.login-box button span {
+  display: block;
+  position: absolute;
+}
+
 .ingredients-check:checked + span {
   text-decoration: line-through;
 }
@@ -222,6 +229,10 @@ html, body {
   width: 45%;
 }
 
+.favorite-recipes a {
+  color: #444;
+}
+
 .container-foods div:hover, .recipe-recomendation:hover, .container-foods a:hover {
   align-items: center;
   background-color: #444;
@@ -237,7 +248,7 @@ html, body {
   width: 45%;
 }
 
-.container-foods div img, .recipe-recomendation img, .container-foods a img {
+.recipe-recomendation img, .container-foods div img, .container-foods a img {
   border: 1px solid #444;
   border-radius: 50%;
   margin-bottom: 10px;
@@ -248,11 +259,9 @@ html, body {
   width: 90%;
 }
 
-.recomendations {
-  padding-bottom: 40px;
-}
-
 .detail-photo {
+  border: 1px solid #444;
+  border-radius: 50%;
   height: 25vh;
   width: 25vh;
 }
@@ -268,11 +277,18 @@ html, body {
   text-align: center;
 }
 
-.detail-photo {
-  border: 1px solid #444;
-  border-radius: 50%;
-  height: 65%;
-  width: 65%;
+.dropdown button {
+  margin-bottom: 10px;
+  width: 360px;
+}
+
+.login-box button:disabled {
+  cursor: not-allowed;
+  width: 100%;
+}
+
+.login-box button:enabled {
+  width: 100%;
 }
 
 .recipe-detail div:last-child {
@@ -339,11 +355,6 @@ form {
   justify-content: space-around;
 }
 
-.dropdown button {
-  margin-bottom: 10px;
-  width: 360px;
-}
-
 .favorite-recipes div:last-child {
   margin: 0 0 15px;
   max-width: 300px;
@@ -356,10 +367,6 @@ form {
   color: #444;
   margin: 0 auto;
   width: 85%;
-}
-
-.favorite-recipes a {
-  color: #444;
 }
 
 .content {
@@ -419,43 +426,6 @@ form {
 
 .login-box form {
   background: transparent;
-}
-
-/* .login-box form button {
-  background-color: #fc466b;
-  border-style: none;
-  color: black;
-  display: inline-block;
-  font-size: 16px;
-  letter-spacing: 4px;
-  margin-top: 40px;
-  overflow: hidden;
-  padding: 10px 20px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 0.5s;
-}
-
-.login-box button:hover:enabled {
-  background: #fbffff;
-  border-radius: 5px;
-  color: rgb(21, 230, 66);
-}
-*/
-
-.login-box button span {
-  display: block;
-  position: absolute;
-}
-
-.login-box button:disabled {
-  cursor: not-allowed;
-  width: 100%;
-}
-
-.login-box button:enabled {
-  width: 100%;
 }
 
 @media ( min-width : 720px ) {
