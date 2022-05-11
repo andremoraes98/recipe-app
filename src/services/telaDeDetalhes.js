@@ -16,12 +16,12 @@ export const getIngredientsAndMeasures = (dataRecipe) => {
     .map((element) => dataRecipe[element]);
 
   const recipeIngredients = ingredients.map((element, index) => (
-    <p
+    <li
       key={ index }
       data-testid={ `${index}-ingredient-name-and-measure` }
     >
-      {`- ${element} - ${measureKeysAndProps[index] || ''}`}
-    </p>));
+      {`${element} - ${measureKeysAndProps[index] || ''}`}
+    </li>));
 
   return recipeIngredients;
 };

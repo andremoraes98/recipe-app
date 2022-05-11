@@ -47,28 +47,39 @@ const DetalhesDeReceita = ({ match: { params: { id }, url } }) => {
   return (
     loading ? 'Carregando' : (
       <div>
-        <h2
-          data-testid="recipe-title"
-        >
-          {pathFood ? dataRecipe[0].strMeal : dataRecipe[0].strDrink}
+        <section className="recipe-detail">
+          <h3
+            data-testid="recipe-title"
+          >
+            {pathFood ? dataRecipe[0].strMeal : dataRecipe[0].strDrink}
 
-        </h2>
-        <h4 data-testid="recipe-category">
-          {pathFood
-            ? dataRecipe[0].strCategory : dataRecipe[0].strAlcoholic}
-        </h4>
-        <img
-          src={ pathFood ? dataRecipe[0].strMealThumb : dataRecipe[0].strDrinkThumb }
-          alt="Foto da coisa pronta"
-          data-testid="recipe-photo"
-          width="80 vn"
-          height="80 vn"
-        />
-        <br />
-        <ShareButton URL={ URL } dataId="share-btn" />
-        <FavoriteButton id={ idFood } path={ pathFood } dataId="favorite-btn" />
-        { getIngredientsAndMeasures(dataRecipe[0]) }
-        <p data-testid="instructions">{dataRecipe[0].strInstructions}</p>
+          </h3>
+          <div>
+            <img
+              src={ pathFood ? dataRecipe[0].strMealThumb : dataRecipe[0].strDrinkThumb }
+              alt="Foto da coisa pronta"
+              data-testid="recipe-photo"
+              className="detail-photo"
+            />
+            <h5 data-testid="recipe-category">
+              {pathFood
+                ? dataRecipe[0].strCategory : dataRecipe[0].strAlcoholic}
+            </h5>
+          </div>
+          <div>
+            <ShareButton URL={ URL } dataId="share-btn" />
+            <FavoriteButton id={ idFood } path={ pathFood } dataId="favorite-btn" />
+          </div>
+        </section>
+        <ul className="details-ingredients">
+          { getIngredientsAndMeasures(dataRecipe[0]) }
+        </ul>
+        <p
+          data-testid="instructions"
+          className="instructions"
+        >
+          {dataRecipe[0].strInstructions}
+        </p>
         { pathFood
       && (
         <iframe
@@ -79,8 +90,8 @@ const DetalhesDeReceita = ({ match: { params: { id }, url } }) => {
         />
       )}
         <CardRecipeRecomendation />
-        {StartButton(idFood, pathFood, url)}
 
+        {StartButton(idFood, pathFood, url)}
       </div>
     )
   );

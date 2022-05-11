@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import DoneFood from '../components/DoneFood';
@@ -20,36 +21,36 @@ const ReceitasFeitas = () => {
       </header>
 
       <div className="done-recipe-buttons">
-        <button
-          type="button"
+        <Button
           data-testid="filter-by-all-btn"
           onClick={ () => setType('all') }
+          variant="dark"
         >
           All
-        </button>
+        </Button>
 
-        <button
-          type="button"
+        <Button
           data-testid="filter-by-food-btn"
           onClick={ () => setType('food') }
+          variant="dark"
         >
           Foods
-        </button>
+        </Button>
 
-        <button
-          type="button"
+        <Button
           data-testid="filter-by-drink-btn"
           onClick={ () => setType('drink') }
+          variant="dark"
         >
           Drinks
-        </button>
+        </Button>
       </div>
 
       <section>
         { renderRecipes.length === 0
           ? (
             <div className="done-recipe-non-recipe">
-              <h3>Você não concluiu nenhuma comida ainda...</h3>
+              <h3>Você não concluiu nenhuma receita ainda...</h3>
             </div>
           )
           : (

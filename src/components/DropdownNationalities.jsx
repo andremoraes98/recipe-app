@@ -1,32 +1,32 @@
 import React from 'react';
+import { Dropdown } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 // import RecipeContext from '../context/RecipesContext';
 
-const DropDownNationalities = ({ nationalities, setSelected, selected }) => (
-  <select
-    name="nationalities"
-    id=""
-    data-testid="explore-by-nationality-dropdown"
-    onChange={ ({ target }) => setSelected(target.value) }
-    value={ selected }
-  >
-    <option data-testid="All-option" value="All">All</option>
-    { nationalities.map((meal) => (
-      <option
-        data-testid={ `${meal.strArea}-option` }
-        key={ Math.random() }
-        value={ meal.strArea }
-      >
-        {meal.strArea}
-      </option>
-    )) }
-  </select>
+const DropDownNationalities = ({ nationalities, setSelected }) => (
+  <Dropdown>
+    <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
+      Nationality
+    </Dropdown.Toggle>
+
+    <Dropdown.Menu variant="dark">
+      { nationalities.map((meal) => (
+        <Dropdown.Item
+          data-testid={ `${meal.strArea}-option` }
+          key={ Math.random() }
+          value={ meal.strArea }
+          onClick={ ({ target }) => setSelected(target.innerHTML) }
+        >
+          {meal.strArea}
+        </Dropdown.Item>
+      )) }
+    </Dropdown.Menu>
+  </Dropdown>
 );
 
 DropDownNationalities.propTypes = {
   nationalities: PropTypes.arrayOf(PropTypes.object).isRequired,
   setSelected: PropTypes.func.isRequired,
-  selected: PropTypes.string.isRequired,
 };
 
 export default DropDownNationalities;

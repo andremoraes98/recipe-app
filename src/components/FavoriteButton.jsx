@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
+import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import whiteHeart from '../images/whiteHeartIcon.svg';
-import blackHeart from '../images/blackHeartIcon.svg';
 import RecipeContext from '../context/RecipesContext';
 
 function FavoriteButton({ id, path, dataId }) {
@@ -41,17 +41,15 @@ function FavoriteButton({ id, path, dataId }) {
   };
 
   return (
-    <button
-      src={ isFavorite ? blackHeart : whiteHeart }
-      type="button"
+    <Button
       data-testid={ dataId }
       onClick={ handleClick }
+      variant={ isFavorite ? 'dark' : 'outline-dark' }
     >
-      <img
-        src={ isFavorite ? blackHeart : whiteHeart }
-        alt="botão de compartilhamento"
-      />
-    </button>
+      { isFavorite
+        ? <MdOutlineFavorite size={ 40 } />
+        : <MdOutlineFavoriteBorder size={ 40 } /> }
+    </Button>
   );
 }
 

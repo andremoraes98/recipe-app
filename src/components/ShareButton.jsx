@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { GrShareOption } from 'react-icons/gr';
+import { GiShare } from 'react-icons/gi';
 import PropTypes from 'prop-types';
 import shareIcon from '../images/shareIcon.svg';
 
@@ -13,18 +16,18 @@ function ShareButton({ URL, dataId }) {
   };
 
   return (
-    <div>
-      <button
-        type="button"
-        data-testid={ dataId }
-        onClick={ handleClick }
-        src={ shareIcon }
-      >
-        <img src={ shareIcon } alt="imagem para compartilhamento de receita" />
-      </button>
-      {isCopy
-      && <p>Link copied!</p>}
-    </div>
+    <Button
+      data-testid={ dataId }
+      onClick={ handleClick }
+      aria-controls="link"
+      aria-expanded={ isCopy }
+      src={ shareIcon }
+      variant={ isCopy ? 'dark' : 'outline-dark' }
+    >
+      { isCopy
+        ? <GiShare size={ 40 } />
+        : <GrShareOption size={ 40 } /> }
+    </Button>
   );
 }
 

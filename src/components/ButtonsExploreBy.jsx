@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
 const ButtonsExploreBy = () => {
@@ -25,37 +26,37 @@ const ButtonsExploreBy = () => {
   };
 
   return (
-    <>
-      <button
+    <section className="explore-container">
+      <Button
         data-testid="explore-by-ingredient"
-        type="button"
         value="ingredients"
         onClick={ (e) => redirectToExploreBy(e) }
+        variant="secondary"
       >
         By Ingredient
-      </button>
+      </Button>
       {
         pathname === '/explore/foods'
           ? (
-            <button
+            <Button
               data-testid="explore-by-nationality"
-              type="button"
               value="nationalities"
               onClick={ (e) => redirectToExploreBy(e) }
+              variant="secondary"
             >
               By Nationality
-            </button>
+            </Button>
           )
           : null
       }
-      <button
+      <Button
         data-testid="explore-surprise"
         onClick={ () => surpriseMe() }
-        type="button"
+        variant="secondary"
       >
         Surprise me!
-      </button>
-    </>
+      </Button>
+    </section>
   );
 };
 
